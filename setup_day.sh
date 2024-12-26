@@ -7,12 +7,15 @@ then
   exit 1
 fi
 
-year="2024"
+year="2016"
 day=$1
 
 echo "Creating files for day $day"
 
 padded_day=$(printf "%02d" ${day})
+
+mkdir -p main/year${year}/resources/
+mkdir -p tests/year${year}/resources/
 
 sed -e "s/{{PADDED_DAY}}/${padded_day}/g" -e "s/{{YEAR}}/${year}/g" template/main_template.txt > main/year${year}/day_"${padded_day}".py
 
