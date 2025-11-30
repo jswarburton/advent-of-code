@@ -7,7 +7,7 @@ then
   exit 1
 fi
 
-year="2016"
+year="2025"
 day=$1
 
 echo "Creating files for day $day"
